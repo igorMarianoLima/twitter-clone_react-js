@@ -1,0 +1,12 @@
+.box {
+    width: 100%;
+
+    background-color: var(--secondary);
+
+    padding: 15px 0;
+    margin: 5px 0;
+
+    &.rounded_box {
+        border-radius: 15px;
+    }
+}

@@ -1,0 +1,46 @@
+.regular_button, .bar_button {
+    height: fit-content;
+
+    background-color: transparent;
+    color: var(--twitter);
+
+    padding: 6px 17px;
+
+    border: .5px solid var(--twitter);
+    
+    &:hover {
+        background-color: var(--twitter-dark-hover);
+    }
+}
+
+.bar_button {
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    border-width: 2px;
+    border-style: hidden hidden solid hidden;
+}
+
+.solid_button {
+    background-color: var(--twitter);
+    color: var(--white);
+
+    padding: 16px;
+
+    transition-duration: .25s;
+
+    &:hover {
+        background-color: var(--twitter-light-hover);
+    }
+}
+
+.regular_button, .solid_button {
+    font-size: 15px;
+    font-weight: bold;
+
+    border-radius: 25px;
+}

@@ -1,0 +1,133 @@
+.retweet-single {
+    padding: 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--outline);
+
+    .profile-avatar {
+        position: relative;
+        top: 15px;
+
+        flex-shrink: 0;
+
+        width: 49px;
+        height: 49px;
+
+        margin-right: 10px;
+    }
+
+    article {
+        width: calc(100% - 49px);
+
+        header {
+            display: flex;
+            flex-direction: column;
+
+            small {
+                color: var(--gray);
+                font-size: 13px;
+            }
+        }
+
+        .tweet-info {
+
+            display: flex;
+            flex-wrap: nowrap;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            
+            strong, span {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+
+            strong {
+                margin-right: 5px;
+            }
+
+            span, time {
+                color: var(--gray);
+            }
+
+            time {
+                margin-right: 10px;
+            }
+
+            time::before {
+                content: "•";
+                margin: 0 5px;
+            }
+        }
+
+        .tweet-description {
+            margin-bottom: 10px;
+
+            font-size: 14px;
+        }
+
+        .tweet-image {
+            width: 100%;
+            padding-top: 50%;
+
+            border-radius: 14px;
+
+            background-color: var(--outline);
+
+            cursor: pointer;
+
+            transition-duration: .25s;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+        
+        .tweet-options {
+            width: 100%;
+
+            padding: 16px 0;
+            padding-bottom: 0;
+            
+            display: flex;
+            justify-content: space-evenly;
+
+            button {
+                transition-duration: .25s;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .icon {
+                    margin-right: 10px;
+                    font-size: 14px;
+
+                    color: currentColor;
+                }
+
+                font-size: 14px;
+
+                &:hover {
+                    opacity: 70%;
+                }
+
+                &.comment_btn {
+                    color: var(--gray);
+                }
+
+                &.retweet_btn {
+                    color: var(--retweet);
+                }
+
+                &.like_btn {
+                    color: var(--like);
+                }
+            }
+        }
+    }
+}

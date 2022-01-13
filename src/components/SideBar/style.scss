@@ -1,0 +1,124 @@
+.side-bar {
+    //max-width: 399px;
+    //width: 100%;
+
+    scroll-behavior: smooth;
+
+    min-height: fit-content;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    padding-top: 0;
+
+    > .wrapper {
+        z-index: 2;
+        background-color: var(--primary);
+
+        position: sticky;
+        top: 0;
+
+        width: 100%;
+
+        padding: 10px 24px;
+    }
+
+    > div {
+        padding: 0px 24px 200px;
+    }
+
+    .input_search {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+
+
+        i {
+            position: absolute;
+            left: calc(18px + 25px);
+
+            font-size: 20px;
+
+            color: var(--gray);
+        }
+
+        input {
+            width: 100%;
+            height: 39px;
+
+            font-size: 14px;
+
+            padding: 0px 10px 0px 52px;
+
+            border: 1px solid transparent;
+            border-radius: 19.5px;
+
+            background-color: var(--search);
+        }
+
+        input, i {
+            transition-duration: .25s;
+        }
+
+        input:focus {
+            border: 1px solid var(--twitter);
+        }
+
+        input:focus + i {
+            color: var(--twitter);
+        }
+    }
+
+    header {
+        padding: 0 15px;
+        padding-bottom: 5px;
+    }
+
+    .list {
+        padding-bottom: 5px;
+    }
+
+    .box {
+        margin-bottom: 10px;
+    }
+
+    .account-single, .trending-topic {
+        background-color: transparent;
+
+        padding: 10px 20px;
+
+        border: 1px var(--outline);
+        border-style: solid hidden hidden hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        strong, span {
+            font-size: 14px;
+        }
+
+        .profile-div {
+            margin-right: 65px;
+        }
+    }
+
+    .trending-topic {
+        flex-direction: column;
+        align-items: flex-start;
+
+        span {
+            color: var(--gray);
+        }
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .side-bar {
+        display: none;
+    }
+}

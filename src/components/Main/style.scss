@@ -1,0 +1,51 @@
+main {
+    //max-width: 601px;
+    //width: 100vw;
+    width: calc(min(601px, 100vw));
+
+    min-height: 100%;
+    height: fit-content;
+
+    border: 1px var(--outline);
+    border-style: hidden solid hidden solid;
+
+    padding-bottom: 35px;
+
+    > header {
+        
+        position: sticky;
+        top: 0;
+        z-index: 2;
+
+        background-color: var(--primary);
+
+        border-bottom: 1px solid var(--outline);
+
+        display: flex;
+        align-items: center;
+
+        padding: 8px 0px 9px 13px;
+
+        button {
+            padding: 10px;
+            margin-right: 15px;
+
+            border-radius: 50%;
+
+            height: 40px;
+            width: 40px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                font-size: 20px !important;
+            }
+
+            &:hover {
+                background-color: var(--twitter-dark-hover);
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.bottom-menu {
+    display: none;
+
+    background-color: var(--primary);
+    
+    border-top: 1px solid var(--outline);
+
+    padding: 8px calc(min(46px, max(10vw, 10px)));
+
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+
+    ul {
+        width: 100%;
+            
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            * {
+                color: var(--gray);
+            }
+
+            button.active * {
+                color: var(--twitter);
+            }
+
+            .icon {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .bottom-menu {
+        display: block;
+    }
+}

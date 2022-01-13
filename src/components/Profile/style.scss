@@ -1,0 +1,142 @@
+.profile-info {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+        font-size: 19px;
+    }
+
+    span {
+        font-size: 15px;
+        color: var(--gray);
+    }
+}
+
+.profile-banner {
+    position: relative;
+    
+    width: 100%;
+    height: calc(min(33vw, 199px));
+
+    background-color: var(--twitter);
+    
+    .profile-avatar {
+        width: calc(max(45px, min(135px, 22vw)));
+        height: calc(max(45px, min(135px, 22vw)));
+
+        position: absolute;
+        left: 15px;
+        bottom: 10px;
+        transform: translateY(+50%);
+
+        border: 3.75px solid var(--primary);
+    }
+}
+
+.profile-avatar {
+    width: 49px;
+    height: 49px;
+
+    background-color: var(--gray);
+
+    border-radius: 50%;
+}
+
+.profile-div {
+    display: flex;
+    align-items: center;
+
+    div:not(.profile-avatar) {
+        margin-left: 10px;
+
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.profile-data {
+    padding: 10px;
+    padding-left: 16px;
+
+    .edit-option {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            padding: 10px 20px;
+        }
+    }
+
+    h1 {
+        margin-top: 15px;
+        font-size: 19px;
+    }
+
+    h2 {
+        font-size: 15px;
+        font-weight: normal;
+        color: var(--gray);
+
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+
+        a {
+            color: var(--twitter);
+        }
+    }
+
+    ul {
+        margin: 10px 0;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+    }
+
+    li, li .icon {
+        color: var(--gray);
+        font-size: 15px;
+    }
+
+    li .icon {
+        margin-right: 10px;
+    }
+
+    .stats {
+        display: flex;
+    }
+
+    .stats p {
+        font-size: 15px;
+        color: var(--gray);
+
+        margin-right: 20px;
+
+        span {
+            font-weight: bold;
+        }
+    }
+}
+
+.profile-tweets {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 604px) {
+    .profile-banner {
+        .profile-avatar {
+            bottom: 0;
+        }
+    }
+
+    .profile-data {
+        h1 {
+            margin-top: 0;
+        }
+    }
+}
