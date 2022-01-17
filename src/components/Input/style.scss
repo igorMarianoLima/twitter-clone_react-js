@@ -1,0 +1,64 @@
+.comment-area {
+    padding: 16px;
+    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .profile-avatar {
+        position: relative;
+        top: 15px;
+
+        flex-shrink: 0;
+
+        width: 49px;
+        height: 49px;
+
+        margin-right: 10px;
+    }
+
+    .comment_options {
+        width: calc(100% - 49px);
+
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            width: 100% !important;
+            height: 160px;
+
+            padding-top: 30px;
+
+            font-size: 15px;
+
+            resize: none;
+        }
+
+        .line {
+            width: 100%;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            .icon {
+                color: var(--twitter);
+                margin-right: 25px;
+                font-size: 22px !important;
+
+            }
+
+            .solid_button {
+                width: 140px;
+
+                font-size: 17px;
+
+                &:disabled {
+                    filter: brightness(70%);
+                }
+            }
+        }
+    }
+
+}
